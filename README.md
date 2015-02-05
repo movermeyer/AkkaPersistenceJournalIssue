@@ -22,6 +22,14 @@ Observe the program for some time (several minutes. It's usually obvious after a
 
 Notice that the number of journal files in the journal/ directory has increased, and so has the disk space used. I would have expected that the number of journal files wouldn't increase, as I am calling 'deleteMessages' every time a snapshot succeeds.
 
+##Example
+
+Here is a chart of the disk usage used during a 13 minute test (Each of the ticks on the X-axis represent 2 seconds).
+
+![alt tag](https://i.imgur.com/y7pyRhb.png)
+
+Note that the journal space used is nearly 700 MiB!
+
 ##Long running tests
 
 There is also a small bash script included (watch_journal_files.sh) which can be run in the root directory of the cloned repo. It outputs the date, # of journal files, and disk space used by the journal files every two seconds. It outputs to a CSV file, and to stdout. This can be useful if you want to run the test for a long time and want to collect the information automatically.
