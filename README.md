@@ -1,5 +1,13 @@
 # AkkaPersistenceJournalIssue
-A piece of sample code that illustrates (LevelDB?) leaking journal files.
+A piece of sample code that illustrates (LevelDB?) leaking journal files, using the new [PersistentActors](http://doc.akka.io/docs/akka/snapshot/scala/persistence.html)
+
+I believe that it is related to the following issue,
+
+* [Mailing List](https://groups.google.com/forum/#!searchin/akka-user/akka-persistentchannel-does-not-delete-message-from-journal-upon-confirm/akka-user/_d9gpIJyKe0/B6Ie_axaFQMJ)
+* [Assembla](https://www.assembla.com/spaces/akka/tickets/3962)
+* [GitHub](https://github.com/akka/akka/issues/13962)
+
+as it has the same symptoms. Indeed, [this other repo](https://github.com/manasdebashiskar/akkapersistenceExample) seems to produce the same issue, except it uses the deprecated PersistentChannel.
 
 ##Usage
 Clone this repo
