@@ -11,6 +11,8 @@ as it has the same symptoms. Indeed, [this other repo](https://github.com/manasd
 
 Note that this has nothing to do with the way akka-persistence uses leveldb, but seems to be an unstated limitation of leveldb with regards to large value sizes.
 
+[It looks like others have hit this issue as well.](https://groups.google.com/forum/#!msg/leveldb/yL6h1mAOc20/vLU64RylIdMJ)
+
 ##Usage
 Clone this repo
 
