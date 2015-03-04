@@ -1,5 +1,5 @@
-# AkkaPersistenceJournalIssue
-A piece of sample code that illustrates (LevelDB?) leaking journal files, using the new [PersistentActors](http://doc.akka.io/docs/akka/snapshot/scala/persistence.html)
+# LevelDB Journal Issue
+A piece of sample code that illustrates LevelDB leaking journal files, using the akka-persistence's new [PersistentActors](http://doc.akka.io/docs/akka/snapshot/scala/persistence.html)
 
 I believe that it is related to the following issue,
 
@@ -8,6 +8,8 @@ I believe that it is related to the following issue,
 * [GitHub](https://github.com/akka/akka/issues/13962)
 
 as it has the same symptoms. Indeed, [this other repo](https://github.com/manasdebashiskar/akkapersistenceExample) seems to produce the same issue, except it uses the deprecated PersistentChannel.
+
+Note that this has nothing to do with the way akka-persistence uses leveldb, but seems to be an unstated limitation of leveldb with regards to large value sizes.
 
 ##Usage
 Clone this repo
